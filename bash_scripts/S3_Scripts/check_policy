@@ -1,0 +1,8 @@
+#!/bin/bash
+
+buckets=$(aws s3api list-buckets --query Buckets[].Name)
+
+for bucket in $buckets;
+do
+	echo ${bucket[@]}
+done
